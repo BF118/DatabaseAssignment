@@ -1,0 +1,27 @@
+CREATE TABLE DEPT
+(
+    DEPTNO int NOT NULL,
+    DNAME varchar(50) NOT NULL,
+    LOC varchar(50) NOT NULL,
+    PRIMARY KEY(DEPTNO)
+ );
+CREATE TABLE MGR(
+    MGR int,
+    PRIMARY KEY(MGR)
+ ); 
+  
+CREATE TABLE EMP
+(
+    EMPNO 	 int NOT NULL,
+    ENAME    varchar(20) NOT NULL,
+    JOB      varchar(50) NOT NULL,
+    MGR 	 int		 ,
+    FOREIGN KEY (MGR) REFERENCES MGR(MGR),
+    HIREDATE DATE        NOT NULL,
+    SAL      DECIMAL     NOT NULL,
+    COMM     DECIMAL     NOT NULL,
+    DEPTNO 	 int 		 ,
+    PRIMARY KEY(EMPNO),
+    FOREIGN KEY (DEPTNO) REFERENCES DEPT(DEPTNO)
+    );
+    
