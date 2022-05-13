@@ -11,8 +11,6 @@ $dsn = 'mysql:host=localhost;dbname=assignment-db';
 $user = 'root';
 $pass = '';
 
-
-
 // Create connection
 $connection = new PDO($dsn, $user, $pass);
 
